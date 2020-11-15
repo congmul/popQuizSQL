@@ -17,6 +17,18 @@ const connection = mysql.createConnection({
 connection.connect(function (err) {
     if (err) throw err;
     console.log("connected as id " + connection.threadId + "\n");
-    
+    sqlQuery(1)
     connection.end();
 });
+
+////////////////////////////////////////////////////////////////////////
+// SQL
+function sqlQuery(id){ 
+    connection.query(
+        "SELECT * FROM quiz WHERE id =" + id,
+        function(err, res) {
+            if(err) throw err;
+            console.log(res);
+        }
+    );
+}
