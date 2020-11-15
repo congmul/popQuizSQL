@@ -11,3 +11,5 @@
 2. Require `mysql`
 3. Connect to MySQL
 4. Print the 3 rows of data to the `console`
+
+<img src = "./img/operatingPopquiz.gif" width = "800" />
